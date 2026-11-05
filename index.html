@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mariuxi Alarcon Aviles</title>
+
+    <style>
+        /* ==============================================
+           PALETA DE COLORES (rosa y lila suaves)
+           Cambia los colores SOLO aquí y se cambian en toda la página.
+           Puedes buscar más colores en: https://htmlcolorcodes.com
+           ============================================== */
+        :root {
+            --color-encabezado: #EBB7CC;  /* rosa suave (caja de arriba)    */
+            --color-menu:       #D5C6E8;  /* lila suave (barra del menú)    */
+            --color-principal:  #FFF8FB;  /* rosa casi blanco (col. grande) */
+            --color-lateral:    #F4ECF8;  /* lila muy claro (col. lateral)  */
+            --color-pie:        #EBB7CC;  /* rosa suave (pie de página)     */
+            --color-titulos:    #9C4A72;  /* rosa oscuro para los títulos   */
+            --color-linea:      #D9B8CC;  /* líneas y bordes finos          */
+            --color-texto:      #3F2B3F;  /* ciruela oscuro para el texto   */
+        }
+
+        /* ---------- CUERPO ---------- */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            color: var(--color-texto);
+            background: #FFFFFF;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        /* ---------- ENCABEZADO ---------- */
+        .encabezado {
+            background: var(--color-encabezado);
+            padding: 25px;
+            text-align: center;
+        }
+        .encabezado h1 {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 2rem;
+        }
+
+        /* ---------- MENÚ ---------- */
+        .menu {
+            background: var(--color-menu);
+            padding: 12px;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .menu a {
+            color: var(--color-texto);
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        .menu a:hover { text-decoration: underline; }
+
+        /* ---------- CONTENIDO (dos columnas) ---------- */
+        .contenido {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        .principal {
+            background: var(--color-principal);
+            padding: 25px 30px;
+            width: 60%;
+        }
+        .lateral {
+            background: var(--color-lateral);
+            padding: 25px 30px;
+            width: 40%;
+        }
+
+        /* ---------- SECCIONES ---------- */
+        .principal section { margin-bottom: 35px; }
+        .principal section:last-child { margin-bottom: 0; }
+        .lateral section { margin-bottom: 35px; }
+        .lateral section:last-child { margin-bottom: 0; }
+        h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            color: var(--color-titulos);
+            border-bottom: 1px solid var(--color-linea);
+            padding-bottom: 4px;
+            margin-top: 0;
+        }
+        h3 { font-size: 1rem; margin-bottom: 6px; }
+
+        /* ---------- IMÁGENES, AUDIO Y VIDEO ---------- */
+        .foto-perfil {
+            float: left;
+            width: 170px;
+            margin: 0 20px 10px 0;
+            border: 1px solid var(--color-linea);
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .galeria figure { margin: 0; }
+        .galeria img { width: 200px; border: 1px solid var(--color-linea); }
+        .galeria figcaption { font-size: .85rem; }
+        audio { width: 100%; }
+        video { width: 100%; max-width: 650px; }
+
+        /* ---------- PIE DE PÁGINA ---------- */
+        .pie {
+            background: var(--color-pie);
+            padding: 15px;
+            text-align: center;
+            margin-top: 8px;
+            font-size: .9rem;
+        }
+        .pie p { margin: 4px 0; }
+        .pie a { color: var(--color-texto); }
+
+        /* ---------- PARA CELULAR ---------- */
+        @media (max-width: 700px) {
+            .contenido { flex-direction: column; }
+            .principal, .lateral { width: auto; }
+            .foto-perfil { float: none; display: block; margin: 0 0 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <div class="encabezado">
+        <!-- ✏️ AQUÍ: escribe tu nombre o tu apodo (en la pizarra decía "Manuxi") -->
+        <h1>Deya Alarcon Aviles</h1>
+    </div>
+
+    <!-- MENÚ: cada enlace salta a una sección de esta misma página (usa el id de cada <section>) -->
+    <div class="menu">
+        <a href="#biografia">Biografía</a> |
+        <a href="#fotos">Fotos</a> |
+        <a href="#musica">Música</a> |
+        <a href="#video">Video</a>
+    </div>
+
+    <!-- CONTENIDO: dos columnas -->
+    <div class="contenido">
+
+        <!-- COLUMNA PRINCIPAL -->
+        <div class="principal">
+
+            <!-- ========== BIOGRAFÍA ========== -->
+            <section id="biografia">
+                <h2>Biografía</h2>
+                <!-- ✏️ AQUÍ: pon tu foto en la carpeta images/ con el nombre mi-foto.jpg (o cambia el nombre aquí) -->
+                <img class="foto-perfil" src="images/WhatsApp Image 2026-11-04 at 19.16.48.jpeg" alt="Mi foto">
+                <!-- ✏️ AQUÍ: escribe tu biografía (quién eres, dónde naciste, qué estudias, tus metas) -->
+                <p>Mi nombre es Mariuxi, tengo 22 años de edad y soy la hermana de en medio. Soy de Babahoyo, provincia de Los Ríos, y vivo antes de llegar al recinto Caracol. Me considero una persona tímida, a la que en ocasiones le cuesta un poco relacionarse y encajar con los demás. Por esa razón, no tengo muchos amigos, pero valoro mucho a las personas que forman parte de mi vida y con quienes puedo sentirme cómoda siendo yo misma.
+                 Entre mis pasatiempos favoritos está descubrir información nueva, ya que me gusta aprender cosas que no conozco y conocer un poco más sobre diferentes temas. Me considero una persona curiosa, porque siempre me llama la atención saber cómo funcionan las cosas o descubrir algo interesante que antes no sabía.</p>
+                <p>A lo largo de mi vida también he tenido la oportunidad de practicar diferentes actividades deportivas. He participado en competencias de ciclismo y, además, he practicado escalada y natación. Aunque fueron experiencias que disfruté bastante y que me permitieron conocer nuevas actividades, actualmente no me considero una deportista, debido a que hace algún tiempo dejé de practicarlas.
+                  En cuanto a mi personalidad, considero que soy una persona reservada, especialmente cuando estoy rodeada de personas que no conozco. Sin embargo, cuando tengo confianza, puedo desenvolverme mejor y mostrar una parte más espontánea de mí. Me gusta aprender, descubrir cosas nuevas y disfrutar de mis momentos de tranquilidad. Aunque no siempre me resulta fácil relacionarme con los demás, considero que cada experiencia me ayuda a conocerme mejor y a seguir creciendo como persona.</p>
+            </section>
+
+            <!-- ========== FOTOS ========== -->
+            <section id="fotos">
+                <h2>Fotos</h2>
+                <!-- ✏️ AQUÍ: pon tus fotos en la carpeta images/ con los nombres foto1.jpg, foto2.jpg, foto3.jpg y foto4.jpg
+                     (o cambia el nombre en src). Para agregar otra foto, copia un bloque <figure>...</figure> completo. -->
+                <div class="galeria">
+                    <figure>
+                        <img src="images/WhatsApp Image 2026-11-04 at 19.16.49.jpeg" alt="Foto 1">
+                        <figcaption>Mi cabello natural</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/WhatsApp Image 2026-11-04 at 19.16.50 (1).jpeg" alt="Foto 2">
+                        <figcaption>Con un peinado que me gusta</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/WhatsApp Image 2026-11-04 at 19.16.50 (2).jpeg" alt="Foto 3">
+                        <figcaption>En la U</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/WhatsApp Image 2026-11-04 at 19.16.50.jpeg" alt="Foto 4">
+                        <figcaption>En un viaje</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- COLUMNA LATERAL -->
+        <div class="lateral">
+
+            <!-- ========== VIDEO ========== -->
+            <section id="video">
+                <h2>Mi video</h2>
+                <!-- ✏️ AQUÍ: pon tu video en la carpeta video/ con el nombre mi-video.mp4 (o cambia el nombre en src) -->
+                <video controls src="video/tsk_049fc98c99b3d7abedb17b1da12bc604.mp4">Tu navegador no puede reproducir video.</video>
+                <!-- ✏️ AQUÍ: cuenta de qué trata tu video -->
+                <p>Por que me gusta mi carrera?</p>
+            </section>
+
+            <!-- ========== MÚSICA ========== -->
+            <section id="musica">
+                <h2>Mi música</h2>
+                <!-- ✏️ AQUÍ: pon tus archivos .mp3 en la carpeta audio/ con los nombres cancion1.mp3 y cancion2.mp3
+                     (o cambia el nombre en src). En la pizarra decía "1 o 2 MP3": si solo tienes uno, borra el segundo bloque. -->
+                <h3>La promesa - Melendi</h3>
+                <audio controls src="audio/La Promesa - Melendi (Lyrics video)(MP3_160K).mp3">Tu navegador no puede reproducir audio.</audio>
+
+                <h3>Clavado en un Bar</h3>
+                <audio controls src="audio/Clavado en Un Bar(MP3_160K).mp3">Tu navegador no puede reproducir audio.</audio>
+            </section>
+
+            <!-- ========== CANCIÓN FAVORITA ========== -->
+            <section id="favorita">
+                <h2>Mi canción favorita</h2>
+                <!-- ✏️ AQUÍ: escribe el nombre de tu canción favorita, el artista y por qué te gusta -->
+                <p><strong>Iris</strong> - Goo Goo Dolls</p>
+                <p> Aunque no este ahi, es mi cancion favorita y la recomendaria siempre. Me parecio una melodia suave, trasmite muchisima paz y amo la letra, sinceramente me enamore de la cancion en cuento la escuche.</p>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <div class="pie">
+        <!-- ✏️ AQUÍ: cambia TU_CORREO@uts.edu.ec por tu correo institucional (aparece 2 veces) -->
+
+        <p>Escríbeme &rarr; <a href="malarcona@fafi.utb.edu.ec"> malarcona@fafi.utb.edu.ec</a></p>
+        <p>&copy; 2026 - Mariuxi Alarcon</p>
+    </div>
+
+</body>
+</html>

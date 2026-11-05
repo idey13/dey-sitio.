@@ -1,0 +1,94 @@
+/* =====================================================
+   ESTILO DE TODO EL SITIO (lo usan las 4 páginas)
+   ===================================================== */
+
+/* ---------- PALETA DE COLORES ----------
+   Cambia los colores SOLO aquí y se cambian en todas las páginas.
+   Puedes buscar colores en: https://htmlcolorcodes.com
+   ------------------------------------------------- */
+:root {
+  --color-encabezado: #B3261E;   /* rojo (caja de arriba)            */
+  --color-menu:       #7B1FA2;   /* morado (barra de menú)           */
+  --color-principal:  #FFF3B0;   /* amarillo (columna grande)        */
+  --color-lateral:    #DDF3D5;   /* verde (columna lateral)          */
+  --color-pie:        #4A148C;   /* morado oscuro (pie de página)    */
+  --color-texto:      #222222;   /* color del texto normal           */
+  --color-texto-claro:#FFFFFF;   /* texto sobre fondos oscuros       */
+}
+
+/* ---------- CUERPO ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  color: var(--color-texto);
+}
+
+/* ---------- ENCABEZADO ---------- */
+.encabezado {
+  background: var(--color-encabezado);
+  color: var(--color-texto-claro);
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------- MENÚ ---------- */
+.menu {
+  background: var(--color-menu);
+  color: var(--color-texto-claro);
+  padding: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+.menu a {
+  color: var(--color-texto-claro);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 12px;
+}
+.menu a:hover { text-decoration: underline; }
+.menu a.actual { text-decoration: underline; }   /* página donde estás */
+
+/* ---------- CONTENIDO (dos columnas) ---------- */
+.contenido {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.principal {
+  background: var(--color-principal);
+  padding: 30px;
+  width: 70%;
+}
+.lateral {
+  background: var(--color-lateral);
+  padding: 30px;
+  width: 30%;
+}
+
+/* ---------- IMÁGENES, AUDIO Y VIDEO ---------- */
+.principal img { max-width: 100%; }
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.galeria figure { margin: 0; }
+.galeria img { width: 240px; }
+audio { width: 100%; }
+video { width: 100%; max-width: 700px; }
+
+/* ---------- PIE DE PÁGINA ---------- */
+.pie {
+  background: var(--color-pie);
+  color: var(--color-texto-claro);
+  padding: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+.pie a { color: var(--color-texto-claro); }
+
+/* ---------- PARA CELULAR ---------- */
+@media (max-width: 700px) {
+  .contenido { flex-direction: column; }
+  .principal, .lateral { width: auto; }
+}
